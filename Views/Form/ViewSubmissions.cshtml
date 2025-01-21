@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ContactFormSubmission>
+
+<h2>Submitted Forms</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Submitted At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var submission in Model)
+        {
+            <tr>
+                <td>@submission.Name</td>
+                <td>@submission.Email</td>
+                <td>@submission.Message</td>
+                <td>@submission.SubmittedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>
