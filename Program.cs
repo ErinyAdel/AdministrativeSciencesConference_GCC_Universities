@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Saudi_FormEmail;
 using Saudi_FormEmail.Helpers;
+using Saudi_FormEmail.Resources;
 using System.Configuration;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,17 +25,12 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 
 builder.Services.AddControllersWithViews()
     .AddViewLocalization()
-    .AddDataAnnotationsLocalization();
+    .AddDataAnnotationsLocalization(options => {
+        options.DataAnnotationLocalizerProvider = (type, factory) =>
+            factory.Create(typeof(SharedResource));
+    });
 
 var app = builder.Build();
-
-var supportedCultures = new[] { "en-US", "ar-SA" };
-var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture("en-US")
-    .AddSupportedCultures(supportedCultures)
-    .AddSupportedUICultures(supportedCultures);
-
-app.UseRequestLocalization(localizationOptions);
 
 if (!app.Environment.IsDevelopment())
 {
@@ -43,6 +40,14 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+var supportedCultures = new[] { "en-US", "ar-SA" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[1])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
 
 app.UseRouting();
 

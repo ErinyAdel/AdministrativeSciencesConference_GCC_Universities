@@ -1,4 +1,7 @@
-﻿@model IEnumerable<ContactFormSubmission>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@model IEnumerable<ContactFormSubmission>
 
 <h2>Submitted Forms</h2>
 <table>

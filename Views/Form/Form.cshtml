@@ -1,12 +1,28 @@
-﻿<form id="contactForm" method="post" action="/send-email">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+﻿@using System.Globalization
+@using Microsoft.Extensions.Localization
+@using Saudi_FormEmail.Resources
+@inject IStringLocalizer<SharedResource> localizer
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <button type="submit">Submit</button>
-</form>
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container"><h2>@localizer["ContactUs"]</h2></div>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="contactForm" method="post" action="/send-email">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="@localizer["Name"]" required>
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="@localizer["Email"]" required>
+                </div>
+                <div>
+                    <textarea id="message" name="message" placeholder="@localizer["Message"]" required></textarea>
+                </div>
+                <div class="d-flex ">
+                    <button type="submit">@localizer["Submit"]</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
