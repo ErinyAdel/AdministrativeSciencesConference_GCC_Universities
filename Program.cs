@@ -6,8 +6,6 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -21,10 +19,22 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 }).AddEntityFrameworkStores<ApplicationDbContext>()
   .AddDefaultTokenProviders();
 
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization()
+    .AddDataAnnotationsLocalization();
 
 var app = builder.Build();
 
-// Middleware
+var supportedCultures = new[] { "en-US", "ar-SA" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture("en-US")
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

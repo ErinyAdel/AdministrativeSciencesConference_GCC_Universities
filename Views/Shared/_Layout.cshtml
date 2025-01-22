@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using System.Globalization
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentCulture.Name" dir="@((CultureInfo.CurrentCulture.Name == "ar-SA") ? "rtl" : "ltr")">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +28,16 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Login">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("ChangeLanguage", "Home", new { culture = "en-US" })">
+                                <img src="~/images/flag-usa.png" alt="English" style="width: 20px; height: 15px;" /> English
+                            </a>                     
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("ChangeLanguage", "Home", new { culture = "ar-SA" })">
+                                <img src="~/images/flag-sa.png" alt="Arabic" style="width: 20px; height: 15px;" /> العربية
+                            </a>                        
                         </li>
                     </ul>
                 </div>
