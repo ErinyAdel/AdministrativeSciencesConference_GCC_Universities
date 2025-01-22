@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using MimeKit;
 using Saudi_FormEmail.Models;
-using Saudi_FormEmail.Resources;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
@@ -16,13 +15,11 @@ namespace Saudi_FormEmail.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
-        private readonly IStringLocalizer<SharedResource> _localizer;
 
-        public FormController(ApplicationDbContext context, IConfiguration configuration, IStringLocalizer<SharedResource> localizer)
+        public FormController(ApplicationDbContext context, IConfiguration configuration)
         {
             _context = context;
             _configuration = configuration;
-            _localizer = localizer;
         }
 
         [Authorize(Roles = "Admin")]
@@ -33,7 +30,7 @@ namespace Saudi_FormEmail.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Form()
+        public IActionResult Index()
         {
             return View();
         }

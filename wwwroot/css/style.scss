@@ -807,3 +807,23 @@ a:focus {
 }
 
 /* end footer section*/
+
+.navbar-custom {
+    background-color: #0a0f43;
+}
+
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #f0a500; /* Accent color */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.nav-link.active {
+    color: #f0a500; /* Highlight active link */
+}

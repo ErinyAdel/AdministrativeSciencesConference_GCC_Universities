@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Saudi_FormEmail.Models;
-using Saudi_FormEmail.Resources;
 
 namespace Saudi_FormEmail.Controllers
 {
@@ -11,12 +10,10 @@ namespace Saudi_FormEmail.Controllers
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IStringLocalizer<SharedResource> _localizer;
-        public AdminController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, IStringLocalizer<SharedResource> localizer)
+        public AdminController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
         {
             _signInManager = signInManager;
             _userManager = userManager;
-            _localizer = localizer;
         }
 
         public IActionResult Login()

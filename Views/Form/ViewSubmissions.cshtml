@@ -1,27 +1,41 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@model IEnumerable<ContactFormSubmission>
+
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IOptions<RequestLocalizationOptions> locOptions
 @inject IViewLocalizer localizer
 
-@model IEnumerable<ContactFormSubmission>
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    ViewData["Title"] = "Admin Login";
+}
 
-<h2>Submitted Forms</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Submitted At</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var submission in Model)
-        {
-            <tr>
-                <td>@submission.Name</td>
-                <td>@submission.Email</td>
-                <td>@submission.Message</td>
-                <td>@submission.SubmittedAt</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<section class="container my-4">
+    <h2 class="text-center mb-4">@localizer["SubmittedForms"]</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@localizer["Name"]/th>
+                    <th>@localizer["Email"]</th>
+                    <th>@localizer["Message"]</th>
+                    <th>@localizer["Date"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var submission in Model)
+                {
+                    <tr>
+                        <td>@submission.Name</td>
+                        <td>@submission.Email</td>
+                        <td>@submission.Message</td>
+                        <td>@submission.SubmittedAt</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

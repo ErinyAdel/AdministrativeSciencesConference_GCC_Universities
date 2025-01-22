@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Saudi_FormEmail;
 using Saudi_FormEmail.Helpers;
-using Saudi_FormEmail.Resources;
 using System.Configuration;
 using System.Globalization;
 
@@ -25,10 +24,7 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 
 builder.Services.AddControllersWithViews()
     .AddViewLocalization()
-    .AddDataAnnotationsLocalization(options => {
-        options.DataAnnotationLocalizerProvider = (type, factory) =>
-            factory.Create(typeof(SharedResource));
-    });
+    .AddDataAnnotationsLocalization();
 
 var app = builder.Build();
 
