@@ -123,4 +123,13 @@
   <data name="Arabic" xml:space="preserve">
     <value>العربية</value>
   </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
 </root>

@@ -20,8 +20,6 @@ namespace Saudi_FormEmail.Controllers
 
         public IActionResult Index()
         {
-            var localizedValue = _localizer["ContactUs"];
-
             return View();
         }
 

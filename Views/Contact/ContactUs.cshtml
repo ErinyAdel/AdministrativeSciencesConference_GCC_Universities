@@ -1,0 +1,55 @@
+﻿﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+
+@inject IOptions<RequestLocalizationOptions> locOptions
+@inject IViewLocalizer localizer
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+}
+
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            @if (ViewData["Message"] != null)
+            {
+                <div class="alert alert-info">
+                    @ViewData["Message"]
+                </div>
+            }
+            <h2>
+                @localizer["ContactUs"]
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="contactForm2" method="POST" asp-controller="Contact" asp-action="SendEmail">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="@localizer["Name"]" />
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="@localizer["Email"]" />
+                    </div>
+                    <div>
+                        <input type="text" id="message" name="message" class="message-box" placeholder="@localizer["Message"]" />
+                    </div>
+                    <div class="d-flex ">
+                        <button>
+                            @localizer["Send"]
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container">
+                    <div class="map">
+                        <div id="googleMap" style="width:100%;height:100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
