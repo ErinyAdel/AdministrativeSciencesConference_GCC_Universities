@@ -48,7 +48,11 @@
                         <td>@submission.Position</td>
                         <td>@submission.Country</td>
                         <td>
-                            <a href="@Url.Action("GetFile", "Form", new { fileName = System.IO.Path.GetFileName(submission.Path) })" target="_blank">Download File</a>
+                            @{ var name = submission.Path; }
+                            @if (name != "" && name != null)
+                            {
+                                <a href="@Url.Action("GetFile", "Form", new { fileName = System.IO.Path.GetFileName(submission.Path) })" target="_blank">Download File</a>
+                            }
                         </td>
                     </tr>
                 }

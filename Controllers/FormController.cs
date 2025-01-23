@@ -90,25 +90,32 @@ namespace Saudi_FormEmail.Controllers
         [HttpGet("GetFile/{fileName}")]
         public IActionResult GetFile(string fileName)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", fileName);
-            if (!System.IO.File.Exists(filePath))
+            try
             {
-                return NotFound();
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", fileName);
+                if (!System.IO.File.Exists(filePath))
+                {
+                    return NotFound();
+                }
+
+                var fileBytes = System.IO.File.ReadAllBytes(filePath);
+                var fileExtension = Path.GetExtension(fileName).ToLower();
+
+                var contentType = fileExtension switch
+                {
+                    ".jpg" or ".jpeg" => "image/jpeg",
+                    ".png" => "image/png",
+                    ".pdf" => "application/pdf",
+                    ".doc" or ".docx" => "application/msword",
+                    _ => "application/octet-stream"
+                };
+
+                return File(fileBytes, contentType, fileName);
             }
-
-            var fileBytes = System.IO.File.ReadAllBytes(filePath);
-            var fileExtension = Path.GetExtension(fileName).ToLower();
-
-            var contentType = fileExtension switch
+            catch
             {
-                ".jpg" or ".jpeg" => "image/jpeg",
-                ".png" => "image/png",
-                ".pdf" => "application/pdf",
-                ".doc" or ".docx" => "application/msword",
-                _ => "application/octet-stream"
-            };
-
-            return File(fileBytes, contentType, fileName);
+                return null;
+            }
         }
     }
 }
