@@ -12,10 +12,18 @@
 
 <section class="contact_section layout_padding">
     <div class="container">
-        <div class="heading_container"><h2>@localizer["ContactUs"]</h2></div>
+        <div class="heading_container">
+            @if (ViewData["Message"] != null)
+            {
+                <div class="alert alert-info">
+                    @ViewData["Message"]
+                </div>
+            }
+            <h2>@localizer["ContactUs"]</h2>
+        </div>
         <div class="row">
             <div class="col-md-6">
-                <form id="contactForm" method="post" action="/send-email">
+                <form id="submitForm" method="post" action="/SaveForm" enctype="multipart/form-data">
                     <div>
                         <input type="text" id="name" name="name" placeholder="@localizer["Name"]" required>
                     </div>
@@ -23,8 +31,34 @@
                         <input type="email" id="email" name="email" placeholder="@localizer["Email"]" required>
                     </div>
                     <div>
-                        <textarea id="message" name="message" placeholder="@localizer["Message"]" required></textarea>
+                        <input type="text" id="phone" name="phone" placeholder="@localizer["Phone"]" required>
                     </div>
+                    <div>
+                        <select id="gender" name="gender" required>
+                            <option value="">@localizer["Select Gender"]</option>
+                            <option value="Male">@localizer["Male"]</option>
+                            <option value="Female">@localizer["Female"]</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="message" name="message" placeholder="@localizer["Message"]" required>
+                    </div>
+                    <div>
+                        <input type="text" id="title" name="title" placeholder="@localizer["Title"]" required>
+                    </div>
+                    <div>
+                        <input type="text" id="company" name="company" placeholder="@localizer["Company"]" required>
+                    </div>
+                    <div>
+                        <input type="text" id="position" name="position" placeholder="@localizer["Position"]" required>
+                    </div>
+                    <div>
+                        <input type="text" id="country" name="country" placeholder="@localizer["Country"]" required>
+                    </div>
+                    <div>
+                        <input type="file" id="file" name="file" accept=".jpg,.png,.pdf,.doc,.docx" required>
+                    </div>
+
                     <div class="d-flex ">
                         <button type="submit">@localizer["Submit"]</button>
                     </div>

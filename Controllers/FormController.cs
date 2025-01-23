@@ -36,38 +36,79 @@ namespace Saudi_FormEmail.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("send-email")]
-        public async Task<IActionResult> SendEmail([FromForm] ContactFormModel model)
+        [HttpPost("SaveForm")]
+        public async Task<IActionResult> SaveForm([FromForm] FormModel model)
         {
-            var submission = new ContactFormSubmission
+            try
             {
-                Name = model.Name,
-                Email = model.Email,
-                Message = model.Message,
-                SubmittedAt = DateTime.UtcNow
+                string uniqueFileName = null;
+                if (model.File != null && model.File.Length > 0)
+                {
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(model.File.FileName);
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await model.File.CopyToAsync(stream);
+                    }
+                }
+
+                var submission = new ContactFormSubmission
+                {
+                    Name = model.Name,
+                    Email = model.Email,
+                    Phone = model.Phone,
+                    Gender = model.Gender,
+                    Message = model.Message,
+                    Title = model.Title,
+                    Company = model.Company,
+                    Position = model.Position,
+                    Country = model.Country,
+                    Path = uniqueFileName == null ? "" : uniqueFileName,
+                    SubmittedAt = DateTime.UtcNow
+                };
+
+                _context.ContactFormSubmissions.Add(submission);
+                await _context.SaveChangesAsync();
+
+                ViewData["Message"] = "تم الإرسال بنجاح";
+            }
+            catch {
+                ViewData["Message"] = "حدث خطأ. حاول مرة أخري";
+            }
+
+            return View("Index");
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("GetFile/{fileName}")]
+        public IActionResult GetFile(string fileName)
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", fileName);
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            var fileBytes = System.IO.File.ReadAllBytes(filePath);
+            var fileExtension = Path.GetExtension(fileName).ToLower();
+
+            var contentType = fileExtension switch
+            {
+                ".jpg" or ".jpeg" => "image/jpeg",
+                ".png" => "image/png",
+                ".pdf" => "application/pdf",
+                ".doc" or ".docx" => "application/msword",
+                _ => "application/octet-stream"
             };
 
-            _context.ContactFormSubmissions.Add(submission);
-            await _context.SaveChangesAsync();
-
-            var emailMessage = new MimeMessage();
-            emailMessage.From.Add(new MailboxAddress("Your App", "faken1245@gmail.com"));
-            emailMessage.To.Add(new MailboxAddress(model.Name, model.Email));
-            emailMessage.Subject = "Contact Form Submission";
-            emailMessage.Body = new TextPart("plain")
-            {
-                Text = $"Name: {model.Name}\nEmail: {model.Email}\nMessage: {model.Message}"
-            };
-
-            using var smtp = new SmtpClient();
-            await smtp.ConnectAsync("smtp.sendgrid.net", 587, SecureSocketOptions.StartTls);
-
-            string sendGridApiKey = _configuration["SendGridAPIKey"];
-            await smtp.AuthenticateAsync("apikey", sendGridApiKey);
-            await smtp.SendAsync(emailMessage);
-            await smtp.DisconnectAsync(true);
-
-            return Ok("Email sent successfully!");
+            return File(fileBytes, contentType, fileName);
         }
     }
 }

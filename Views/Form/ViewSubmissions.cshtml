@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<ContactFormSubmission>
 
+@using System.IO
 ﻿@using Microsoft.AspNetCore.Builder
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Options
@@ -21,8 +22,15 @@
                 <tr>
                     <th>@localizer["Name"]</th>
                     <th>@localizer["Email"]</th>
+                    <th>@localizer["Phone"]</th>
+                    <th>@localizer["Gender"]</th>
                     <th>@localizer["Message"]</th>
                     <th>@localizer["Date"]</th>
+                    <th>@localizer["Title"]</th>
+                    <th>@localizer["Company"]</th>
+                    <th>@localizer["Position"]</th>
+                    <th>@localizer["Country"]</th>
+                    <th>@localizer["File"]</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,8 +39,17 @@
                     <tr>
                         <td>@submission.Name</td>
                         <td>@submission.Email</td>
+                        <td>@submission.Phone</td>
+                        <td>@submission.Gender</td>
                         <td>@submission.Message</td>
                         <td>@submission.SubmittedAt</td>
+                        <td>@submission.Title</td>
+                        <td>@submission.Company</td>
+                        <td>@submission.Position</td>
+                        <td>@submission.Country</td>
+                        <td>
+                            <a href="@Url.Action("GetFile", "Form", new { fileName = System.IO.Path.GetFileName(submission.Path) })" target="_blank">Download File</a>
+                        </td>
                     </tr>
                 }
             </tbody>
