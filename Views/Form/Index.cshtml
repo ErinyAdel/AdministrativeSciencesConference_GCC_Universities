@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         @Html.DropDownListFor(m => m.Gender, new SelectList(new[] {
-                        new { Value = "", Text = localizer["Select Gender"].Value },
+                        new { Value = "", Text = localizer["SelectGender"].Value },
                         new { Value = "Male", Text = localizer["Male"].Value },
                         new { Value = "Female", Text = localizer["Female"].Value }
                             }, "Value", "Text"), new { @class = "form-control" })

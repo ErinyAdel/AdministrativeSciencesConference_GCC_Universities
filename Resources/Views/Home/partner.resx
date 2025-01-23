@@ -117,25 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="Sponsorship700" xml:space="preserve">
+    <value>Sponsorship700</value>
   </data>
-  <data name="Arabic" xml:space="preserve">
-    <value>العربية</value>
+  <data name="Sponsorship700Content" xml:space="preserve">
+    <value>Sponsorship700Content</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>Contact Us</value>
+  <data name="Sponsorship500Content" xml:space="preserve">
+    <value>Sponsorship500Content</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="Sponsorship500" xml:space="preserve">
+    <value>Sponsorship500</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>Language</value>
+  <data name="Sponsorship400" xml:space="preserve">
+    <value>Sponsorship400</value>
   </data>
-  <data name="StrategicPartnerBenefits" xml:space="preserve">
-    <value>StrategicPartnerBenefits</value>
+  <data name="Sponsorship400Content" xml:space="preserve">
+    <value>Sponsorship400Content</value>
   </data>
-  <data name="ConferenceName" xml:space="preserve">
-    <value>ConferenceName</value>
+  <data name="Sponsorship300" xml:space="preserve">
+    <value>Sponsorship300</value>
+  </data>
+  <data name="Sponsorship300Content" xml:space="preserve">
+    <value>Sponsorship300Content</value>
+  </data>
+  <data name="Sponsorship250" xml:space="preserve">
+    <value>Sponsorship250</value>
+  </data>
+  <data name="Sponsorship250Content" xml:space="preserve">
+    <value>Sponsorship250Content</value>
   </data>
 </root>

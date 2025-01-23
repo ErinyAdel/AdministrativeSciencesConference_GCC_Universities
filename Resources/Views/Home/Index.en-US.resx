@@ -127,4 +127,62 @@ Mission of the Conference
 To stimulate the cultural and creative economy, provide a platform for showcasing outstanding scientific research, and enhance dialogue between experts, researchers, and decision-makers while offering practical recommendations to reach new horizons.
 </value>
   </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="ConferenceName" xml:space="preserve">
+    <value>The Fourth Conference of The Administrative Sciences at Universities of The GCC Countries</value>
+  </data>
+  <data name="ConferenceTitle" xml:space="preserve">
+    <value>Cultural &amp; Creative Economy 
+Present Potentials &amp; Promising Opportunities &lt;br /&gt;
+21 – 22 April 2025 I King Saudi University Riyadh, Hamad Aljassir Hall 
+Kingdom of Saudi Arabia</value>
+  </data>
+  <data name="ConferenceVision" xml:space="preserve">
+    <value>Vision of The Conference</value>
+  </data>
+  <data name="ConferenceVisionContent" xml:space="preserve">
+    <value>To highlight the present capabilities of the cultural and creative economy, and explore promising opportunities for achieving sustainable development.</value>
+  </data>
+  <data name="ConferenceMission" xml:space="preserve">
+    <value>Mission of The Conference</value>
+  </data>
+  <data name="ConferenceMissionContent" xml:space="preserve">
+    <value>To Stimulate The Cultural and Creative Economy, Provide a Platform For Showcasing Outstanding Dcientific Research, and Enhance Dialogue Between Experts, Researchers, and Decision-Makers While offering Practical Recommendations To Reach New Horizons.</value>
+  </data>
+  <data name="ConferenceObjectives" xml:space="preserve">
+    <value>Objectives of The Conference</value>
+  </data>
+  <data name="ConferenceObjectivesContent" xml:space="preserve">
+    <value>1- Highlight the role of creativity and innovation in enhancing sustainable development and improving communities.
+&lt;br /&gt;
+2- Stimulate the ability of individuals and communities to adapt to rapid changes through the exchange of innovative ideas.
+&lt;br /&gt;
+3- Promote dialogue and collaboration between experts and decision-makers to provide practical recommendations that address current issues.
+&lt;br /&gt;
+4- Encourage participants to discover their creative potential and make better use of their intellectual energies.</value>
+  </data>
+  <data name="CCC_CBA" xml:space="preserve">
+    <value>CCC_CBA 2025</value>
+  </data>
+  <data name="CCC_CBA_Content" xml:space="preserve">
+    <value>• 2 days of scientific studies
+&lt;br /&gt;
+• 20 economic and cultural research papers
+&lt;br /&gt;
+• Over 7,000 attendees
+&lt;br /&gt;
+• Partners from around the world
+&lt;br /&gt;
+• 10-panel discussions
+&lt;br /&gt;
+• 50 local, Gulf, Arab, and global speakers</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AboutUsContent" xml:space="preserve">
+    <value>The Global Labor Market Conference (GLMC) leverages analysis, research, and thought leadership to explore evolving landscapes and enable discussions on data, opportunities, and outlooks. We also host and support influential global events where decision-makers come together to discuss changes that aim to future-proof the global labor market.</value>
+  </data>
 </root>

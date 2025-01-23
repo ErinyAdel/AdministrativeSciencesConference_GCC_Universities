@@ -117,25 +117,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="Sponsorship700" xml:space="preserve">
+    <value>Sponsorship Value 700,000 SAR</value>
   </data>
-  <data name="Arabic" xml:space="preserve">
-    <value>العربية</value>
+  <data name="Sponsorship700Content" xml:space="preserve">
+    <value>&lt;p&gt;
+    Partner logo inclusion in the conference's marketing campaign.
+    &lt;br /&gt;
+    Exclusive announcements of the strategic partnership before, during, and after the conference.
+    &lt;br /&gt;
+    Partner logo displayed across all conference elements (entrance gate, directional signage, registration area, welcome board, conference screens, and advertising boards within the university).
+    &lt;br /&gt;
+    Partnership announcement across all advertising channels.
+    &lt;br /&gt;
+    Two full-page advertisements in the University Message newsletter, distributed weekly to all 28 colleges of King Saud University.
+    &lt;br /&gt;
+    Marketing space in the electronic version of the University Message newsletter.
+    &lt;br /&gt;
+    Advertising spaces on the university’s external and internal digital screens network.
+    &lt;br /&gt;
+    Coordination and relationship-building with sponsors, partners, and conference teams.
+    &lt;br /&gt;
+    Participation in presenting the Creativity Award.
+    &lt;br /&gt;
+    Exhibition space of 50 square meters.
+    &lt;br /&gt;
+    Participation in two panel discussions.
+    &lt;br /&gt;
+    Delivery of two workshops.
+    &lt;br /&gt;
+    Partner recognition by the event sponsor.
+&lt;/p&gt;</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>Contact Us</value>
+  <data name="Sponsorship500Content" xml:space="preserve">
+    <value>&lt;p&gt;
+    Partner logo inclusion in the conference's marketing campaign.
+    &lt;br /&gt;
+    Exclusive announcements of the strategic partnership before, during, and after the conference.
+    &lt;br /&gt;
+    Partner logo displayed across all conference elements (entrance gate, directional signage, registration area, welcome board, conference screens, and advertising boards within the university).
+    &lt;br /&gt;
+    Partnership announcement across all advertising channels.
+    &lt;br /&gt;
+    Half-page advertisement in the University Message newsletter, distributed weekly to all 28 colleges of King Saud University.
+    &lt;br /&gt;
+    Marketing space in the electronic version of the University Message newsletter.
+    &lt;br /&gt;
+    Participation in the Creativity Award.
+    &lt;br /&gt;
+    Exhibition space of 50 square meters.
+    &lt;br /&gt;
+    Participation in two panel discussions.
+    &lt;br /&gt;
+    Delivery of one workshop.
+    &lt;br /&gt;
+    Partner recognition by the event sponsor.
+&lt;/p&gt;</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="Sponsorship500" xml:space="preserve">
+    <value>Premium Partner Benefits Sponsorship Value 500,000 SAR</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>Language</value>
+  <data name="Sponsorship400" xml:space="preserve">
+    <value>Cultural Partner Benefits Sponsorship Value 400,000 SAR</value>
   </data>
-  <data name="StrategicPartnerBenefits" xml:space="preserve">
-    <value>StrategicPartnerBenefits</value>
+  <data name="Sponsorship400Content" xml:space="preserve">
+    <value>&lt;p&gt;
+    Partner logo inclusion in the conference's marketing campaign.
+    &lt;br /&gt;
+    Partner logo displayed across all conference elements (entrance gate, directional signage, registration area, welcome board, conference screens, and advertising boards within the university).
+    &lt;br /&gt;
+    Partnership announcement across all advertising channels.
+    &lt;br /&gt;
+    Half-page advertisement in the University Message newsletter, distributed weekly to all 28 colleges of King Saud University.
+    &lt;br /&gt;
+    Marketing space in the electronic version of the University Message newsletter.
+    &lt;br /&gt;
+    Exhibition space of 36 square meters.
+    &lt;br /&gt;
+    Participation in one panel discussion.
+    &lt;br /&gt;
+    Delivery of one workshop.
+    &lt;br /&gt;
+    Partner recognition by the event sponsor.
+&lt;/p&gt;</value>
   </data>
-  <data name="ConferenceName" xml:space="preserve">
-    <value>ConferenceName</value>
+  <data name="Sponsorship300" xml:space="preserve">
+    <value>Economic Partner Benefits Sponsorship Value 300,000 SAR</value>
+  </data>
+  <data name="Sponsorship300Content" xml:space="preserve">
+    <value>&lt;p&gt;
+    Partner logo inclusion in the conference's marketing campaign.
+    &lt;br /&gt;
+    Partner logo displayed across all conference elements (entrance gate, directional signage, registration area, welcome board, conference screens, and advertising boards within the university).
+    &lt;br /&gt;
+    Partnership announcement across all advertising channels.
+    &lt;br /&gt;
+    Marketing space in the electronic version of the University Message newsletter.
+    &lt;br /&gt;
+    Exhibition space of 36 square meters.
+    &lt;br /&gt;
+    Participation in one panel discussion.
+    &lt;br /&gt;
+    Delivery of one workshop.
+    &lt;br /&gt;
+    Partner recognition by the event sponsor.
+&lt;/p&gt;</value>
+  </data>
+  <data name="Sponsorship250" xml:space="preserve">
+    <value>Creative Partner Benefits Sponsorship Value 250,000 SAR</value>
+  </data>
+  <data name="Sponsorship250Content" xml:space="preserve">
+    <value>&lt;p&gt;
+    Partner logo inclusion in the conference's marketing campaign.
+    &lt;br /&gt;
+    Partner logo displayed across all conference elements (entrance gate, directional signage, registration area, welcome board, conference screens, and advertising boards within the university).
+    &lt;br /&gt;
+    Partnership announcement across all advertising channels.
+    &lt;br /&gt;
+    Exhibition space of 30 square meters.
+    &lt;br /&gt;
+    Participation in one-panel discussion.
+    &lt;br /&gt;
+    Delivery of one workshop.
+    &lt;br /&gt;
+    Partner recognition by the event sponsor.
+&lt;/p&gt;</value>
   </data>
 </root>

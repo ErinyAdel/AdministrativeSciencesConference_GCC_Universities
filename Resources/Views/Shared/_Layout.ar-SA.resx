@@ -132,4 +132,10 @@
   <data name="Language" xml:space="preserve">
     <value>اللغة</value>
   </data>
+  <data name="StrategicPartnerBenefits" xml:space="preserve">
+    <value>مزايا الشريك الابداعي</value>
+  </data>
+  <data name="ConferenceName" xml:space="preserve">
+    <value>المؤتمر الرابع لكليات العلوم الادارية بجامعات دول مجلس التعاون لدول الخليج العربية </value>
+  </data>
 </root>

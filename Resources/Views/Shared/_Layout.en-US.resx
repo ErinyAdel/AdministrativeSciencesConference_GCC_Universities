@@ -132,4 +132,10 @@
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="StrategicPartnerBenefits" xml:space="preserve">
+    <value>Strategic Partner Benefits</value>
+  </data>
+  <data name="ConferenceName" xml:space="preserve">
+    <value>The Fourth Conference of The Administrative Sciences at Universities of The GCC Countries</value>
+  </data>
 </root>
