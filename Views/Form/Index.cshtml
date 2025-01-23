@@ -1,4 +1,6 @@
-﻿﻿@using Microsoft.AspNetCore.Builder
+﻿@model FormModel
+
+@using Microsoft.AspNetCore.Builder
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Options
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -23,42 +25,52 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <form id="submitForm" method="post" action="/SaveForm" enctype="multipart/form-data">
+                <form asp-action="SaveForm" enctype="multipart/form-data" method="post">
                     <div>
-                        <input type="text" id="name" name="name" placeholder="@localizer["Name"]" required>
+                        @Html.TextBoxFor(m => m.Name, new { placeholder = localizer["Name"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="@localizer["Email"]" required>
+                        @Html.TextBoxFor(m => m.Email, new { placeholder = localizer["Email"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <input type="text" id="phone" name="phone" placeholder="@localizer["Phone"]" required>
+                        @Html.TextBoxFor(m => m.Phone, new { placeholder = localizer["Phone"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <select id="gender" name="gender" required>
-                            <option value="">@localizer["Select Gender"]</option>
-                            <option value="Male">@localizer["Male"]</option>
-                            <option value="Female">@localizer["Female"]</option>
-                        </select>
+                        @Html.DropDownListFor(m => m.Gender, new SelectList(new[] {
+                        new { Value = "", Text = localizer["Select Gender"].Value },
+                        new { Value = "Male", Text = localizer["Male"].Value },
+                        new { Value = "Female", Text = localizer["Female"].Value }
+                            }, "Value", "Text"), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger" })
+                    </div>
+                    <div><br /></div>
+                    <div>
+                        @Html.TextAreaFor(m => m.Message, new { placeholder = localizer["Message"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                    </div>
+                    <div><br /></div>
+                    <div>
+                        @Html.TextBoxFor(m => m.Title, new { placeholder = localizer["Title"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <input type="text" id="message" name="message" placeholder="@localizer["Message"]" required>
+                        @Html.TextBoxFor(m => m.Company, new { placeholder = localizer["Company"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Company, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <input type="text" id="title" name="title" placeholder="@localizer["Title"]" required>
+                        @Html.TextBoxFor(m => m.Position, new { placeholder = localizer["Position"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Position, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <input type="text" id="company" name="company" placeholder="@localizer["Company"]" required>
+                        @Html.TextBoxFor(m => m.Country, new { placeholder = localizer["Country"].Value, @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
                     </div>
                     <div>
-                        <input type="text" id="position" name="position" placeholder="@localizer["Position"]" required>
+                        <input type="file" name="File" class="form-control">
                     </div>
-                    <div>
-                        <input type="text" id="country" name="country" placeholder="@localizer["Country"]" required>
-                    </div>
-                    <div>
-                        <input type="file" id="file" name="file" accept=".jpg,.png,.pdf,.doc,.docx" required>
-                    </div>
-
                     <div class="d-flex ">
                         <button type="submit">@localizer["Submit"]</button>
                     </div>
