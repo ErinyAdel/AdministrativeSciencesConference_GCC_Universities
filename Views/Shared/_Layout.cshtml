@@ -9,6 +9,12 @@
 
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "en-US", Text = "English" },
+        new SelectListItem { Value = "ar-SA", Text = "العربية" }
+    };
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
 
 <!DOCTYPE html>
@@ -48,16 +54,12 @@
                             <a class="nav-link" asp-controller="Admin" asp-action="Login">@localizer["Admin"]</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                                @localizer["Language"]
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="?culture=en-US">
-                                    <img src="~/images/flag-usa.png" alt="English" style="width: 20px;" /> @localizer["English"]
-                                </a>
-                                <a class="dropdown-item" href="?culture=ar-SA">
-                                    <img src="~/images/flag-sa.png" alt="Arabic" style="width: 20px;" /> @localizer["Arabic"]
-                                </a>
+                            <div title="@localizer["Language"]">
+                                <form id="selectLanguage" method="POST" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl">
+                                    <select name="culture" onchange="this.form.submit();"
+                                            asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+                                    </select>
+                                </form>
                             </div>
                         </li>
                     </ul>
