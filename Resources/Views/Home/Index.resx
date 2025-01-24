@@ -168,4 +168,16 @@
   <data name="Announcement2" xml:space="preserve">
     <value>Announcement2</value>
   </data>
+  <data name="SecondAnnouncementContent" xml:space="preserve">
+    <value>SecondAnnouncementContent</value>
+  </data>
+  <data name="FirstAnnouncementContent" xml:space="preserve">
+    <value>FirstAnnouncementContent</value>
+  </data>
+  <data name="FirstAnnouncementTitle" xml:space="preserve">
+    <value>FirstAnnouncementTitle</value>
+  </data>
+  <data name="SecondAnnouncementTitle" xml:space="preserve">
+    <value>SecondAnnouncementTitle</value>
+  </data>
 </root>
