@@ -132,4 +132,13 @@
   <data name="ContactUs" xml:space="preserve">
     <value>تواصل معنا</value>
   </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="WebsiteName" xml:space="preserve">
+    <value>كلية إدارة الأعمال</value>
+  </data>
 </root>
