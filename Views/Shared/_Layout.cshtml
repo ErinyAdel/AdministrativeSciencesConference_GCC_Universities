@@ -54,14 +54,25 @@
                             <a class="nav-link" asp-controller="Admin" asp-action="Login">@localizer["Admin"]</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <div title="@localizer["Language"]">
-                                <form id="selectLanguage" method="POST" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl">
-                                    <select name="culture" onchange="this.form.submit();"
-                                            asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
-                                    </select>
-                                </form>
-                            </div>
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @localizer["Language"]
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                @foreach (var item in cultureItems)
+                                {
+                                    <li>
+                                        <form method="POST" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" style="display:inline;">
+                                            <button type="submit" name="culture" value="@item.Value" class="dropdown-item">
+                                                <img src="~/images/@((item.Value == "en-US") ? "flag-usa.png" : "flag-sa.png")"
+                                                     alt="@item.Text" style="width: 20px;" />
+                                                @item.Text
+                                            </button>
+                                        </form>
+                                    </li>
+                                }
+                            </ul>
                         </li>
+
                     </ul>
                 </div>
             </nav>
