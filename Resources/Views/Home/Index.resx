@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Vision" xml:space="preserve">
-    <value>Visi</value>
+    <value>Vision</value>
   </data>
   <data name="parag1" xml:space="preserve">
     <value>parag</value>
@@ -161,5 +161,11 @@
   </data>
   <data name="AboutUsContent" xml:space="preserve">
     <value>AboutUsContent</value>
+  </data>
+  <data name="Announcement" xml:space="preserve">
+    <value>Announcement</value>
+  </data>
+  <data name="Announcement2" xml:space="preserve">
+    <value>Announcement2</value>
   </data>
 </root>

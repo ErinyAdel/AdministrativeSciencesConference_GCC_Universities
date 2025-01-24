@@ -169,7 +169,7 @@ Kingdom of Saudi Arabia</value>
   <data name="CCC_CBA_Content" xml:space="preserve">
     <value>• 2 days of scientific studies
 &lt;br /&gt;
-• 20 economic and cultural research papers
+• 200 economic and cultural research papers
 &lt;br /&gt;
 • Over 7,000 attendees
 &lt;br /&gt;
@@ -183,6 +183,12 @@ Kingdom of Saudi Arabia</value>
     <value>About Us</value>
   </data>
   <data name="AboutUsContent" xml:space="preserve">
-    <value>The Global Labor Market Conference (GLMC) leverages analysis, research, and thought leadership to explore evolving landscapes and enable discussions on data, opportunities, and outlooks. We also host and support influential global events where decision-makers come together to discuss changes that aim to future-proof the global labor market.</value>
+    <value>The Fourth Conference of Administrative Sciences Colleges in the Universities of the Gulf Cooperation Council (GCC) is a leading scientific platform under the theme “Cultural and Creative Economy: Present Potential and Promising Opportunities.” The conference aims to explore the role of the cultural and creative economy in driving growth and sustainable development, while highlighting the promising opportunities offered by this vital sector. By bringing together academics, experts, and practitioners, the conference seeks to open new horizons for cooperation and knowledge exchange among the GCC countries, while also supporting innovation in the creative economy. Additionally, the conference welcomes participation from countries outside the GCC, providing a global platform for new opportunities in the creative sector.</value>
+  </data>
+  <data name="Announcement" xml:space="preserve">
+    <value>Announcement</value>
+  </data>
+  <data name="Announcement2" xml:space="preserve">
+    <value>Announcement</value>
   </data>
 </root>
