@@ -11,8 +11,8 @@
     var culture = requestCulture?.RequestCulture?.Culture?.Name ?? "ar-SA";
     var imageMap = new Dictionary<string, string>
     {
-        { "en-US", "images/l2.jpeg" },
-        { "ar-SA", "images/l1.jpeg" }
+        { "en-US", "images/logoen.png" },
+        { "ar-SA", "images/logoar.png" }
     };
     var imagePath = imageMap.ContainsKey(culture) ? imageMap[culture] : imageMap["ar-SA"];
 
