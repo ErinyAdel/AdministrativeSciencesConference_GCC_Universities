@@ -22,8 +22,8 @@ namespace Saudi_FormEmail.Helpers
             }
 
             // Create the admin user
-            var adminEmail = "admin@example.com";
-            var adminPassword = "Admin@123"; // Replace with a secure password
+            var adminEmail = "admin@Ccc_cba.com";
+            var adminPassword = "Admin@123";
 
             var adminUser = await userManager.FindByEmailAsync(adminEmail);
             if (adminUser == null)
