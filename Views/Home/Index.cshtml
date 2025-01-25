@@ -8,6 +8,14 @@
 
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var culture = requestCulture?.RequestCulture?.Culture?.Name ?? "ar-SA";
+    var imageMap = new Dictionary<string, string>
+    {
+        { "en-US", "images/l2.jpeg" },
+        { "ar-SA", "images/l1.jpeg" }
+    };
+    var imagePath = imageMap.ContainsKey(culture) ? imageMap[culture] : imageMap["ar-SA"];
+
     ViewData["Title"] = "Home Page";
 }
 
@@ -28,7 +36,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img src="images/banen-Photoroom (1).png" alt="">
+                        <img src="@imagePath" alt="">
                     </div>
                 </div>
             </div>
