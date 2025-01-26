@@ -140,12 +140,17 @@
   </data>
   <data name="ConferenceTitle" xml:space="preserve">
     <value>&lt;b&gt;
-الاقتصاد الثقافي والابداعي 
-امكانات حاضرة وفرص واعدة
+    الاقتصاد الثقافي والابداعي
 &lt;/b&gt;
 &lt;br /&gt;
+&lt;small&gt;
+    امكانات حاضرة وفرص واعدة
+&lt;/small&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;small&gt;
 21 – 22 أبريل 2025 جامعة الملك سعود الرياض، قاعة حمد الجاسر
-المملكة العربية السعودية</value>
+المملكة العربية السعودية
+&lt;/small&gt;</value>
   </data>
   <data name="ConferenceVision" xml:space="preserve">
     <value>رؤية المؤتمر</value>

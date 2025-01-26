@@ -27,7 +27,7 @@ namespace Saudi_FormEmail.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult PrevEvents()
         {
             return View();
         }

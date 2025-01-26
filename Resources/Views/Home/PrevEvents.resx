@@ -117,28 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="ConferenceMission" xml:space="preserve">
+    <value>ConferenceMission</value>
   </data>
-  <data name="Arabic" xml:space="preserve">
-    <value>العربية</value>
+  <data name="ConferenceMissionContent" xml:space="preserve">
+    <value>ConferenceMissionContent</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>تواصل معنا</value>
+  <data name="ConferenceVision" xml:space="preserve">
+    <value>ConferenceVision</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>الرئيسية</value>
+  <data name="ConferenceVisionContent" xml:space="preserve">
+    <value>ConferenceVisionContent</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>اللغة</value>
+  <data name="ConferenceObjectives" xml:space="preserve">
+    <value>ConferenceObjectives</value>
   </data>
-  <data name="StrategicPartnerBenefits" xml:space="preserve">
-    <value>مزايا الشريك الابداعي</value>
+  <data name="ConferenceObjectivesContent" xml:space="preserve">
+    <value>ConferenceObjectivesContent</value>
   </data>
-  <data name="ConferenceName" xml:space="preserve">
-    <value>المؤتمر الرابع لكليات العلوم الادارية بجامعات دول مجلس التعاون لدول الخليج العربية </value>
+  <data name="CCC_CBA" xml:space="preserve">
+    <value>CCC_CBA</value>
   </data>
-  <data name="PrevEvents" xml:space="preserve">
-    <value>أحداث سابقة</value>
+  <data name="CCC_CBA_Content" xml:space="preserve">
+    <value>CCC_CBA_Content</value>
   </data>
 </root>

@@ -117,28 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="ConferenceMission" xml:space="preserve">
+    <value>رسالة المؤتمر</value>
   </data>
-  <data name="Arabic" xml:space="preserve">
-    <value>العربية</value>
+  <data name="ConferenceMissionContent" xml:space="preserve">
+    <value>تحفيز الاقتصاد الثقافي والإبداعي، وتوفير منصة لعرض الأبحاث العلمية المميزة. وتعزيز الحوار بين الخبراء والباحثين وصانعي القرار وتقديم توصيات عملية للوصول إلى آفاق جديدة.</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>تواصل معنا</value>
+  <data name="ConferenceVision" xml:space="preserve">
+    <value>رؤية المؤتمر</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>الرئيسية</value>
+  <data name="ConferenceVisionContent" xml:space="preserve">
+    <value>تسليط الضوء على الإمكانات الحاضرة للاقتصاد الثقافي والإبداعي، واستكشاف الفرص الواعدة لتحقيق التنمية المستدامة.</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>اللغة</value>
+  <data name="ConferenceObjectives" xml:space="preserve">
+    <value>أهداف المؤتمر</value>
   </data>
-  <data name="StrategicPartnerBenefits" xml:space="preserve">
-    <value>مزايا الشريك الابداعي</value>
+  <data name="ConferenceObjectivesContent" xml:space="preserve">
+    <value>1- إبراز دور الاقتصاد الثقافي والإبداعي في تحقيق التنمية المستدامة.
+&lt;br /&gt;
+2- إظهار أهمية الموروث الثقافي والحرف اليدوية في التنويع الاقتصادي.
+&lt;br /&gt;
+3- تشجيع الابداع والابتكار من خلال المخرجات البحثية.
+&lt;br /&gt;
+4- تعزيز الشراكة وجسور التواصل بين الجامعات والقطاع العام والخاص.
+&lt;br /&gt;
+5- تحقيق التقارب الثقافي وتبادل الخبرات والتجارب الدولية.</value>
   </data>
-  <data name="ConferenceName" xml:space="preserve">
-    <value>المؤتمر الرابع لكليات العلوم الادارية بجامعات دول مجلس التعاون لدول الخليج العربية </value>
+  <data name="CCC_CBA" xml:space="preserve">
+    <value>CCC_CBA 2025</value>
   </data>
-  <data name="PrevEvents" xml:space="preserve">
-    <value>أحداث سابقة</value>
+  <data name="CCC_CBA_Content" xml:space="preserve">
+    <value>• 2 يوم من الدراسات العلمية
+&lt;br /&gt;
+• 200 ورقة بحثية اقتصادية ثقافية
+&lt;br /&gt;
+• اكثر من 7000 من الحضور
+&lt;br /&gt;
+• شركاء من حول العالم
+&lt;br /&gt;
+• 10 جلسات حوارية
+&lt;br /&gt;
+• 50 متحدث محلي خليجي عربي عالمي</value>
   </data>
 </root>

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true" />
 </head>
 <body>
-    <header class="header_section navbar-custom" style="padding: 20px; background-color: slategrey;">
+    <header class="header_section navbar-custom" style="padding: 20px; background-color: #0F1661;">
         <div class="header">
             <nav class="navbar navbar-expand-lg custom_nav-container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -38,23 +38,26 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto" style="font-size: 20px;">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Home" asp-action="Index">@localizer["Home"]</a>
+                            <a class="nav-link active" asp-controller="Home" asp-action="Index" style="color: white;">@localizer["Home"]</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Home" asp-action="partner">@localizer["StrategicPartnerBenefits"]</a>
+                            <a class="nav-link active" asp-controller="Home" asp-action="partner" style="color: white;">@localizer["StrategicPartnerBenefits"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-controller="Home" asp-action="PrevEvents" style="color: white;">@localizer["PrevEvents"]</a>
                         </li>
                         @* <li class="nav-item">
-                            <a class="nav-link" asp-controller="Form" asp-action="Index">@localizer["Form"]</a>
+                        <a class="nav-link" asp-controller="Form" asp-action="Index" style="color: white;">@localizer["Form"]</a>
                         </li> *@
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Contact" asp-action="ContactUs">@localizer["ContactUs"]</a>
+                            <a class="nav-link" asp-controller="Contact" asp-action="ContactUs" style="color: white;">@localizer["ContactUs"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Admin" asp-action="Login">@localizer["Admin"]</a>
+                            <a class="nav-link" asp-controller="Admin" asp-action="Login" style="color: white;">@localizer["Admin"]</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" 
+                            style="color: white;">
                                 @localizer["Language"]
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">

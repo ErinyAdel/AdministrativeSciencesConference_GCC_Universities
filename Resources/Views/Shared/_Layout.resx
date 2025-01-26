@@ -138,4 +138,7 @@
   <data name="ConferenceName" xml:space="preserve">
     <value>ConferenceName</value>
   </data>
+  <data name="PrevEvents" xml:space="preserve">
+    <value>PrevEvents</value>
+  </data>
 </root>

@@ -117,28 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="ConferenceMission" xml:space="preserve">
+    <value>Mission of The Conference</value>
   </data>
-  <data name="Arabic" xml:space="preserve">
-    <value>العربية</value>
+  <data name="ConferenceMissionContent" xml:space="preserve">
+    <value>To Stimulate The Cultural and Creative Economy, Provide a Platform For Showcasing Outstanding Dcientific Research, and Enhance Dialogue Between Experts, Researchers, and Decision-Makers While offering Practical Recommendations To Reach New Horizons.</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>تواصل معنا</value>
+  <data name="ConferenceVision" xml:space="preserve">
+    <value>Vision of The Conference</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>الرئيسية</value>
+  <data name="ConferenceVisionContent" xml:space="preserve">
+    <value>To highlight the present capabilities of the cultural and creative economy, and explore promising opportunities for achieving sustainable development.</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>اللغة</value>
+  <data name="ConferenceObjectives" xml:space="preserve">
+    <value>Objectives of The Conference</value>
   </data>
-  <data name="StrategicPartnerBenefits" xml:space="preserve">
-    <value>مزايا الشريك الابداعي</value>
+  <data name="ConferenceObjectivesContent" xml:space="preserve">
+    <value>1- Highlight the role of creativity and innovation in enhancing sustainable development and improving communities.
+&lt;br /&gt;
+2- Stimulate the ability of individuals and communities to adapt to rapid changes through the exchange of innovative ideas.
+&lt;br /&gt;
+3- Promote dialogue and collaboration between experts and decision-makers to provide practical recommendations that address current issues.
+&lt;br /&gt;
+4- Encourage participants to discover their creative potential and make better use of their intellectual energies.</value>
   </data>
-  <data name="ConferenceName" xml:space="preserve">
-    <value>المؤتمر الرابع لكليات العلوم الادارية بجامعات دول مجلس التعاون لدول الخليج العربية </value>
+  <data name="CCC_CBA" xml:space="preserve">
+    <value>CCC_CBA 2025</value>
   </data>
-  <data name="PrevEvents" xml:space="preserve">
-    <value>أحداث سابقة</value>
+  <data name="CCC_CBA_Content" xml:space="preserve">
+    <value>• 2 days of scientific studies
+&lt;br /&gt;
+• 200 economic and cultural research papers
+&lt;br /&gt;
+• Over 7,000 attendees
+&lt;br /&gt;
+• Partners from around the world
+&lt;br /&gt;
+• 10-panel discussions
+&lt;br /&gt;
+• 50 local, Gulf, Arab, and global speakers</value>
   </data>
 </root>
